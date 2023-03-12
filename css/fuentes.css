@@ -6,7 +6,17 @@ label {
 body {
     background-color: rgb(20, 20, 209);
 }
+head{
+    display: flex;
+    background-position: top;
+    background-color: linen;
+}
+.cuadrado{
+    width: 150px;
+    height: 100px;
+    background-color: blanchedalmond;
 
+}
 .fuentes{
     display: flex;
     justify-content: center;

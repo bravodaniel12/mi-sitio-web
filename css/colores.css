@@ -4,6 +4,9 @@ body{
     background-color: darkcyan;
     
 }
+.a{
+    color:red;
+}
 .box-color{
     display: flex;
     flex-direction: row;
