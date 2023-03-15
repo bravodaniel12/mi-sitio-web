@@ -1,0 +1,43 @@
+h1{
+    text-align:center;
+}
+.main-box{
+    display: flex;
+    flex-direction: row;
+}
+.box-style{/* sirve paRA TODOS los cuadros */
+width: 250px;
+text-align:justify;
+margin: 20px;
+display:inline-block; /* sirve para organizar los cuadros de horizontalmente */
+padding: 15px 35px;
+font-size: 1.3em;
+letter-spacing: 0;
+word-spacing: 0;
+line-height: 1.3em;
+
+}
+.box-1{
+    border: 2px solid rgb(64, 64, 64,.9);
+   /* solid- sirve para que el borde se mire */
+   margin-bottom:20px;
+   background-color: tomato;
+}
+.box-2{
+    border: 2px dashed rgb(64, 64, 64,.9);
+   /* dashed- sirve para que el borde tenga rayitas */
+   margin-bottom: 20px;
+   background-color:greenyellow
+}
+.box-3{
+    border: 2px dotted rgb(64, 64, 64,.9);
+   /* dotted- sirve para que el borde tenga punticos todavia mas pequeñas */
+   margin-bottom: 20px;
+   background-color:seagreen
+}
+.box-4{
+    border: 2px double rgb(64, 64, 64,.9);
+   /* double- es un marco con doble lineas muy delgadas */
+   margin-bottom: 20px;
+   background-color:paleturquoise
+}
