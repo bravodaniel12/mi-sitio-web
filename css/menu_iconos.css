@@ -19,7 +19,9 @@
    
 }
 body{
-    background-color: #000080;
+    background:linear-gradient(tomato, orange) ;
+    width: 100vh;
+    height: 100vh;
 }
 nav{
     position: fixed;
