@@ -1,4 +1,39 @@
 * {
-    margin: 8;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+}
+.main-menu{
+    list-style: none;
+    top: 0;
+    left: 0;
+    height: 200vh;
+    width: 200px;
+    background-color: whitesmoke;
+    
+}
+.fa-solid, .fa-brands{
+    color: rgb(0, 0, 0);
+     font-size: 1em; /*  es el tamaño de letra */
+    margin-top: 40px; /* es el espacio que hay de figura a figura  */
+    margin-left: 20px;/* es el espacio de ancho de la margen a la figura */
+   
+}
+body{
+    background-color: #000080;
+}
+nav{
+    position: fixed;
+    top: 0px;
+    left: 1px;
+    width: 200px;
+    height: 100vh;
+    background-color:gainsboro ;
+}
+hr{
+      /* color: black; */
+    height: 1px;
+    width: 180px;
+    margin: 4%;
+    padding: 0%;
+    border: 1;
 }
