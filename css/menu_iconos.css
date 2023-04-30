@@ -1,5 +1,5 @@
 * {
-    margin: 0px;
+    margin: 0;
     padding: 0px;
 }
 .main-menu{
@@ -10,6 +10,7 @@
     width: 200px;
     background-color: whitesmoke;
     
+
 }
 .fa-solid, .fa-brands{
     color: rgb(0, 0, 0);
@@ -24,12 +25,15 @@ body{
     height: 100vh;
 }
 nav{
-    position: fixed;
+    position: relative; 
     top: 0px;
     left: 1px;
     width: 200px;
     height: 100vh;
     background-color:gainsboro ;
+    border: 3px solid grey;
+    overflow: auto;
+
 }
 hr{
       /* color: black; */
