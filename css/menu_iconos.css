@@ -24,6 +24,10 @@ body{
     width: 100vh;
     height: 100vh;
 }
+li:hover{
+    background-color: gainsboro;
+
+}
 nav{
     /* position: relative ;*/
     top: 0%;
