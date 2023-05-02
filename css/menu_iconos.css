@@ -1,50 +1,41 @@
-* {
-    margin: 0;
-    padding: 0px;
-}
-.main-menu{
-    list-style: none;
+nav{
+    background-color:rgb(243, 233, 233);
+    position: fixed;
     top: 0;
     left: 0;
-    height: 140vh;
-    width: 300px;
-    background-color: whitesmoke;
-    
-
-}
-.fa-solid, .fa-brands{
-    color: rgb(0, 0, 0);
-     font-size: 1em; /*  es el tamaño de letra */
-    margin-top: 40px; /* es el espacio que hay de figura a figura  */
-    margin-left: 20px;/* es el espacio de ancho de la margen a la figura */
-   
-}
-body{
-    background:linear-gradient(tomato, orange) ;
-    width: 100vh;
+    width: 220px;
     height: 100vh;
-}
-li:hover{
-    background-color: gainsboro;
-
-}
-nav{
-    /* position: relative ;*/
-    top: 0%;
-    left: 1px;
-    width: 200px;
-    height: 100vh;
-    background-color:gainsboro ;
     border: 2px solid grey;
     overflow: auto;
+    
+}
+ul{
+    list-style: none;
+    padding: 10px;
+    
+}
+a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:13px;
 
 }
-hr{
-      /* color: black; */
-    height: 1px;
-    width: 180px;
-    margin: 4%;
-    padding: 0%;
-    border: 1;
+ul{
+    border: 1px solid transparent;
 }
+ul:hover {
+border-radius: 10px;
+background-color:rgb(191, 191, 196);
+}
+.raya{
+border-bottom: 1px solid rgb(134, 138, 138) ;
+width: 150px;
+left:10px;
+position: relative;
+margin-bottom: 5px;
+}
+i{
+    padding-right: 20px;
+}
+
 
