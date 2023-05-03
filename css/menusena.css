@@ -1,0 +1,20 @@
+nav{
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
+.horizontal{
+    top: 50px;
+    left: 50;
+    display: inline-block;
+    display: flex;
+    border:solid 2px aqua ;
+    border-top: 10px;
+    
+ }
+.vertical{
+    top: 0;
+    left: 0;
+   
+}

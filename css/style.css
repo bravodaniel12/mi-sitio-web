@@ -52,15 +52,17 @@ body h1,h2{
     align-items: center;
 }
 
-/* estos son los comando de los botones fosforecentes */
+/* estos son los comandos de los botones fosforecentes */
 div{
     margin-top: 20px;
 }
+
 .box-1{
   --glow-color: rgb(208, 211, 212) ;
   --glow-spread-color: rgb(23, 32, 42);
   --enhanced-glow-color: rgb(235, 152, 78);
   --btn-color: rgb(192, 57, 43);
+
 }
 
 button {
