@@ -7,7 +7,7 @@ nav{
     width: 220px;
     height: 100vh;
     border: 2px solid grey;
-    overflow: auto;
+    overflow: auto; /* sirve para crear labarra de desplazamiento */
     
     
     
