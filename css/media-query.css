@@ -1,79 +1,71 @@
-* {
+*{
     margin: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-.bar-menu {
-    cursor: pointer;
-    position: fixed;
-    color: white;
-    font-size: 2.2em;
-    top: 15px;
-    right: 30px;
-    visibility: hidden;
+    padding: 0;
 }
 .main-nav {
-    position: fixed;
-    top: 0 ;
-    left: 0;
-    width: 100%;
-    background-color: rgba(64,64,64);
+    background: rgb(64, 64, 64);
     height: 80px;
 }
-.main-menu {
-    list-style: none;  
-    text-align: right; 
+.main-menu{
+    text-align: right;
 }
-.item-menu {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-}
-.item-main-menu {
-    height: 80px;
+.item-style {
     display: inline-block;
-    padding: 30px 45px;   
+    line-height: 60px;
+    border-bottom: 1px solid rgb(160, 160, 160);
+    margin: 0 30px;
+    list-style: none;
 }
-.item-main-menu:hover {
-    cursor: pointer;
-    background-color: black;
+.item-style-last{
+    margin-right: 100px;
 }
 a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5em;
     text-decoration: none;
-    padding-left: 20px;
-    color: whitesmoke;
 }
-
-
-@media only screen and (max-width:1152px) {
-
-    .main-menu {
-        background-color: rgba(96, 96, 96, 0.9);
-        margin-top: 81px;
-        padding: 0;
-        display: none;
-    }
-    .main-menu-visible {
-        display: block;
-        background-color: rgb(96, 96, 96, .9);
-        margin-top: 81px;
-        padding: 0;
-    }
-    .item-main-menu{
-        width: 100%;
-        display: block;
-        line-height: 70px;
+.hamburguer-menu {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    /* desaparecemos el menu */
+    .main-menu{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        left: -100%;
+        height: 300px;
+        transition: all 1s;
         text-align: center;
-        padding: 0;
-        border-bottom: 1px solid white;
+        margin-top: 22px;
     }
-    .item-main-menu:hover{
-        background-color: rgba(71, 68, 68, 0.9);
+    .main-menu-block{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(48, 48, 48,.8);
+        margin-top: 22px;
+        width: 100%;
+        padding: 30px;
+        height: 300px;
+        left: 0;
+        transition: all 1s;
     }
-    .bar-menu {
-        visibility: visible;
-        margin-right: 60%;
-    
+    .tem-style {
+        display: block;   
+        text-align: center;
+        border-bottom: 1px solid rgb(180, 180, 180);
     }
+    .hamburguer-menu{
+        display: inline-block;
+        color: white;
+        font-size: 2.3em;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+}
+.hamburguer-menu:hover {
+    cursor: pointer;
+
 }
