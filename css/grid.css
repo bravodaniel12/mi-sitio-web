@@ -7,8 +7,12 @@
 h1 {
     color: black;
     text-align: center;
+    justify-content: center;
     padding: 30px 0px 30px ;
-    
+
+}
+a {
+    justify-content: center;
 }
 
 .contenedor {

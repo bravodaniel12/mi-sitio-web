@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.contenedor {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    border: 2 solid red;
+    align-content: center;
+justify-content: center;
+    grid-template-columns: repeat(2, 150px);/* ancho */
+    grid-template-rows: repeat(2, 150px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
+    grid-gap: 10px ;
+    
+
+}
+.caja {
+    background-color: rgb(170, 170, 170);
+    border: 1 solid black;
+}
+.box {
+    padding: 20px;
+    background-color: rgb(170, 170, 170);
+
+}
+.contenedor .caja {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
