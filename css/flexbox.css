@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -23,3 +24,127 @@
     flex-direction: column;
     background-color: rgba(127, 244, 255, 0.746);
 }
+=======
+
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: sans-serif;
+}
+h2 {
+    margin: 20px 20px 5px 20px;
+}
+.box{
+    width: 100%;
+    background-color: rgb(178, 32, 32);
+}
+.box-gen {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    background-color: rgb(255, 115, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8em;
+    color: white;
+    font-weight: 900;  /*para lo gordo*/
+
+}
+.box-1{
+    
+    display: flex;
+    flex-direction: row;
+}
+/*colum- columna-vertical   row-horizontal flex-wrap= (no le da importancia al viewport) acomoda debajo del otro   NoWrap= lo adapta al tamaño del div   
+flex wrap= le da prioridad a la caja*/
+.box-2{
+    display: flex;
+    flex-direction: column;
+    
+}
+.box-3 {
+    display: flex;
+   flex-wrap: wrap;
+   /* height: 350px;
+   overflow: auto; */
+}
+.box-4{ 
+    display: flex;
+    flex-wrap: nowrap;
+}
+.box-5{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 760px;
+}
+.box-6{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 700px;
+}
+.box-7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/* da un espacio igual entre elementos(menos en las esquinas)*/
+
+}
+.box-8{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;/*quesa espacio en las esquinas, pero es la mitad de lo que hay entre ellos*/
+}
+.box-9 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;/* da un espaciado entre esquinas y entre ellos mismos de la misma distancia*/
+}
+.box-10 {
+    display: flex;
+    justify-content: flex-start; /*lado izquierdo*/
+
+
+}
+.box-11 {
+    display: flex;
+    justify-content: flex-end;/*lado derecho*/
+
+    
+}
+.box-12 {
+    display: flex;
+   justify-content: center; /*Los centra pero sin tomar en cuneta las margenes a las esquina*/
+    
+}
+.box-13 {
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    align-items: flex-start;/*centra sobre el eje de la Y, arriba*/
+}
+.box-14 {
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    align-items: center;/*centra sobre el eje de la Y, en el medio*/
+}
+.box-15 {
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    align-items: flex-end;/*centra sobre el eje de la Y, abajo*/
+}
+.box-16 {
+    display: flex;
+    flex-flow:column wrap ;/*combinacion del flex-direction con flex-wrap*/
+    height: 350px;
+    overflow-x: scroll;/*parece una cinta de video solo se mueve ella*/
+
+}
+.box-17{
+    display: flex;
+    flex-flow:row-reverse;/*los muestra en reversa, iniciando pior el lado contrario */
+}
+>>>>>>> 7cf27c0988b06cc03b2c64baf1d1caf1d800cbf0
