@@ -33,6 +33,7 @@ grid-template-rows: repeat(7, 100px) ;  /* alto */    /* tambien funciona el cod
 grid-gap: 10px 20px;
 
 }
+
 /* .contenedor .item1 {
     grid-column-start: 1;
     grid-column-end: 4;
