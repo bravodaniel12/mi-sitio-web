@@ -27,7 +27,7 @@ height: 100vh;
 display: grid;
 align-content: center;
 justify-content: center;
-border: 1px solid black;
+/* border: 1px solid black; */
 grid-template-columns: repeat(7, 140px);/* ancho */
 grid-template-rows: repeat(7, 100px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
 grid-gap: 10px 20px;
@@ -65,7 +65,7 @@ grid-gap: 10px 20px;
     color: white;
 }
 
-@font-face {
+ @font-face {
     font-family: waltograph1;
     src: url(../fonts/waltograph42.otf);
 }
@@ -73,3 +73,7 @@ grid-gap: 10px 20px;
 .fuentes {
     font-family: waltograph1;
 }
+ 
+
+
+ 
