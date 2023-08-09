@@ -40,8 +40,9 @@ grid-gap: 10px 20px;
     background-color: aqua ;
 } */
 .contenedor .texto {
-    grid-column-start: 3;
+    grid-column-start: 1;
     grid-column-end: 7;
+    background-color: white;
 }
 .contenedor .inicio {
     grid-column-start: 4;
