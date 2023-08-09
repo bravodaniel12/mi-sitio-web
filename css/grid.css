@@ -23,13 +23,13 @@ a {
 
 .contenedor {
 width: 100%;
-height: 80vh;
+height: 100vh;
 display: grid;
 align-content: center;
 justify-content: center;
-border: 2px solid black;
+border: 1px solid black;
 grid-template-columns: repeat(7, 140px);/* ancho */
-grid-template-rows: repeat(6, 100px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
+grid-template-rows: repeat(7, 100px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
 grid-gap: 10px 20px;
 
 }
@@ -38,6 +38,10 @@ grid-gap: 10px 20px;
     grid-column-end: 4;
     background-color: aqua ;
 } */
+.contenedor .texto {
+    grid-column-start: 3;
+    grid-column-end: 7;
+}
 .contenedor .inicio {
     grid-column-start: 4;
 }
