@@ -1,74 +1,98 @@
 
-*{
-    padding: 0;
-    margin: 0;  
-}
-body{
-    width: 100%;
+.mainbox{
     display: grid;
-    grid-template: "empty-left         main-page           empty-right"  100vh /
-                 minmax(30px,1fr)  minmax(700px, 1200px)   minmax(30px,1fr) ;
+    grid-template:  "empty-left cabeza        empty         empty       empty-right " 150px
+                    "empty-left imagen-prin  imagen-prin  imagen-prin   empty-right "700px
+                    "empty-left aticulo1     aticulo2      aticulo3     empty-right " 400px
+                    "empty-left txt-art1     txt-art2      txt-art3     empty-right " 500px/
+                     200px        420px       420px         420px         200px;
+    grid-gap: 50px;
+           
 }
-.main-page{
-    grid-area: main-page ;
-}
-header{
-    display: grid;
-    margin-top: 50px;
-    gap: 30px;
-    grid-template: "logo       main-menu" 80px / 
-                   150px       minmax(700px,100%);
-}
-.logo{
-    grid-area:logo   ;
-    background-color: goldenrod;
-}
-.main-menu{
+.header{
+    grid-area: cabeza;
+    background-color: rgb(161, 111, 111);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px;
     
-    grid-area:main-menu ;
-    background-color: rgb(30,167,69);
 }
-.style-text{
-    font-family: Verdana, sans-serif;
-    font-size: 1.6em;
+
+.img-principal{
+    grid-area: imagen-prin;
+    background-color: rgb(10, 240, 240);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px;
+}
+.img-articulo{
+    background-color: rgb(216, 118, 118);
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px;
+}
+.one{
+    grid-area: aticulo1;
+}
+.two{
+    grid-area: aticulo2;
+}
+.three{
+    grid-area: aticulo3;
+}
+/*     .texto-articulo{
+        border: 1px solid black;
+        border-radius: 40px;
+       
+
+    } */
+.art1{
+    grid-area: txt-art1;
+}
+.art2{
+    grid-area: txt-art2;
+}
+.art3{
+    grid-area: txt-art3;
+}
+.texto{
+    height: 100%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5em;
 }
-.main-content{
-  
-    margin-top: 40px 70px;
-    display: grid;
-    gap: 30px;
-    grid-template: " main-img   main-img    main-img" 600px 
-                    "article-1    article-2   article-3"
-                    "article-4    article-5   article-6"450px / 
-                       1fr           1fr        1fr  ;
+.txt{
+    padding: 5px;
+    font-size: 1.8em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media  only screen and  (max-width:1629px){
+    .mainbox{
+   display: grid;
+   width:  100%;
+       grid-template:  "empty-left  cabeza        empty         empty      empty-right" 150px
+                       "empty-left  imagen-prin  imagen-prin  imagen-prin  empty-right" 210px
+                       "empty-left  aticulo1     aticulo2      aticulo3    empty-right" 210px
+                       "empty-left  txt-art1     txt-art2      txt-art3    empty-right" 210px/
+                        50px        280px         280px      280px    80px;
+       grid-gap: 50px;
+    }          
+   }
 
-}
-.main-img{
-    margin-top: 15PX;
-    grid-area: main-img;
-    background-color: darkcyan;
-}
-.article-1{grid-area: article-1;}
-.article-2{grid-area: article-2;}
-.article-3{grid-area: article-3;}
-.article-4{grid-area: article-4;}
-.article-5{grid-area: article-5;}
-.article-6{grid-area: article-6;}
+@media  only screen and  (max-width:1100px){
+       .mainbox{
+      display: grid;
+      width:  100%;
+          grid-template: "cabeza " 20%
+                          "imagen-prin"25%
+                          "aticulo1 "25%
+                          "txt-art1"25%
+                          "aticulo2 "25%
+                          "txt-art2"25%
+                          "aticulo3 "25%
+                           "txt-art3"25%/
+                           100%        100%          100% ;
+          grid-gap: 35px;
+                
+      }
 
-.img-article{
-      border-radius: 15PX;
-    height: 350px;
-    background-color: rgb(64,64,64.8);
-}
-.style-text-article{
-    padding-top: 30px;
-    color: rgb(66, 66, 66);
-    text-align: justify;
-    font-size: 1.2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.4em;
 }
