@@ -1,147 +1,155 @@
+
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;  
 }
 body{
-  display: grid;
   width: 100%;
-  grid-template: "empty-let     main-page                empty-right" 100vh/
-               minmax(50px,1fr)       minmax(900px,1200px)       minmax(50px,1fr)             ;
+  display: grid;
+  background-color: rgb(57, 143, 57);
+  grid-template: "empty-left         main-page           empty-right"  100vh /
+               minmax(30px,1fr)  minmax(700px, 1200px)   minmax(30px,1fr) ;
 }
 .main-page{
-  grid-area: main-page;
+  grid-area: main-page ;
 }
 header{
   display: grid;
-  gap: 30px;
   margin-top: 50px;
-  grid-template:" logo    main-menu"80px/
-                  150px       minmax(700px,100%);
+  gap: 30px;
+  grid-template: "logo       main-menu" 80px / 
+                 70px       minmax(500px,100%);
 }
 .logo{
-  border-radius: 10px;
-  grid-area: logo;
-  background-image: url("../img/LOGOTEE.png");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
+  border-radius: 15px;
+  grid-area:logo   ;
+  
 }
 .main-menu{
-  grid-area: main-menu ;
-  height: 80px;
+  border-radius: 15PX;
+  grid-area:main-menu ;
+  background-color: rgb(197, 120, 48);
   width: 100%;
-  background-image: url(../img/microfonooo.jpg);
-  background-repeat: no-repeat;
+  background-color: grey; /* este es sin aumentp vista pc */
+  height: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
 }
-.style-tex{
-  font-family: verdana,sans-serif;
+.style-text{
+  font-family: Verdana, sans-serif;
   font-size: 1.6em;
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .main-content{
+
+  margin-top: 40px 70px;
   display: grid;
-  margin-top:15px ;
-  gap: 40px 70px ;
-  grid-template: "main-img  main-img  main-img" 600px
-                   "articulo-1   articulo-2    articulo-3 " 
-                   "articulo-4   articulo-5    articulo-6 "450px/
-                    1fr            1fr             1fr;
+  gap: 30px;
+  grid-template: " main-img   main-img    main-img" 600px 
+                  "article-1    article-2   article-3"
+                  "article-4    article-5   article-6"450px / 
+                     1fr           1fr        1fr  ;
+
+}
+.logo-img{
+  cursor: pointer;
+  width: 100%;
+  background-image: url(../img/logo.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-img{
-  grid-area: main-img ;
-  background-image: url("../img/icecube.jpg");
+  border-radius: 15PX;
+  margin-top: 15PX;
+  grid-area: main-img;
   width: 100%;
-  background-repeat: no-repeat;
+  background-image: url(../img/serpiente.png); /* este es sin aumentp vista pc */
+  height: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
 }
-.articulo-1{
-  grid-area: articulo-1;
+.img-article-1{
+  width: 100%;
+  background-image: url(../img/primera.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.articulo-2{
-  grid-area: articulo-2;
+.img-article-2 {
+  width: 100%;
+  background-image: url(../img/segunda.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.articulo-3{
-  grid-area: articulo-3;
+.img-article-3 {
+  width: 100%;
+  background-image: url(../img/tercera.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.articulo-4{
-  grid-area: articulo-4;
+.img-article-4 {
+  width: 100%;
+  background-image: url(../img/cuarta.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.articulo-5{
-  grid-area: articulo-5;
+.img-article-5 {
+  width: 100%;
+  background-image: url(../img/quinta.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.articulo-6{
-  grid-area: articulo-6;
+.img-article-6{
+  width: 100%;
+  background-image: url(../img/sesta.jpg); /* este es sin aumentp vista pc */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.img-articullo1{
+.article-1{grid-area: article-1 ;}
+.article-2{grid-area: article-2 ;}
+.article-3{grid-area: article-3 ;}
+.article-4{grid-area: article-4 ;}
+.article-5{grid-area: article-5 ;}
+.article-6{grid-area: article-6 ;}
+
+.img-article{
+  border-radius: 15PX;
   height: 350px;
-  background-image: url(../img/tu22.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
+  background-color: blueviolet;
 }
-.img-articullo2{
-  height: 350px;
-  background-image: url(../img/hipp.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-}
-.img-articullo3{
-  height: 350px;
-  background-image: url(../img/2ARRRR.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-  border-radius: 15px;
-}
-.img-articullo4{
-  height: 350px;
-  background-image: url(../img/SNOPPP.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-  border-radius: 15px;
-}
-.img-articullo5{
-  height: 350px;
-  background-image: url(../img/CALLEEEEE.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-  border-radius: 15px;
-}
-.img-articullo6{
-  height: 350px;
-  background-image: url(../img/OK.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-  border-radius: 15px;
-}
-.style-tex-img{
-  text-align: center;
-  font-size: 1.2em;
-  color:  rgb(64,64,64.9);
-  font-family: verdana, sans-serif;
-  font-weight: 2em;
+.style-text-article{
+  padding-top: 30px;
+  color: black;
   text-align: justify;
+  font-size: 1.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4em;
 }
-@media only screen and (max-width: 452px) {
+/* / Móviles en horizontal o tablets en vertical
+ ///////////////////////////////////////////////////////////////////////////////////////// / */
+
+/* Mobile phones */
+@media only screen and (max-width :750px) {
   body {
       grid-template:
         "main-page"
@@ -154,30 +162,58 @@ header{
       margin: 20px;
     }
     header{
-      grid-template: "logo    main-menu"80px/
-                      100px       minmax(50px , 500px);
+      grid-template: "logo    main-menu"50px/
+                      50px       minmax(50px , 400px);
       justify-content: center;
     }
     .main-content{
       grid-template: 
       "main-img"
-      300px
-      "articulo-1"
+      550px
+      "article-1"
       auto
-      "articulo-2"
+      "article-2"
       auto
-      "articulo-3"
+      "article-3"
       auto
-      "articulo-4"
+      "article-4"
       auto
-      "articulo-5"
+      "article-5"
       auto
-      "articulo-6"
+      "article-6"
       auto / 100%;
     }
-    .img-articullo{
+    .img-article{
       height: 200px;
     }
+    .style-text-article{
+      padding-top: 30px;
+      color: black;
+      text-align: justify;
+      font-size: 1em;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 1.4em;
+  }
+  .style-text{
+      padding-top: 10px;
+      font-family: Verdana, sans-serif;
+      font-size: 20px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .main-img{
+    border-radius: 15PX;
+    margin-top: 15PX;
+    grid-area: main-img;
+    width: 100%;
+    background-image: url(../img/fondo3.avif); /* este es sin aumentp vista pc */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 
