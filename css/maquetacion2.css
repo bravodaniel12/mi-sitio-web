@@ -24,12 +24,14 @@ body{
 }
 .item-style:hover {
   background: rgb(79, 134, 13);
+  padding: 10px ;
 
 }
 .menu {
+  
   text-decoration: none;
   list-style: none;
-  padding:0px 20px ;
+  padding:0px 50px ;
   border-radius: 100px;
   font-weight: 200;
   font-size: 1.1em;
@@ -39,13 +41,13 @@ body{
 
 }
 .main-nav   {
-  
    padding: 25px;
-   height: 45px;
+   height: 5px;
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-size: 1.5em;
 }
 .mainMenu {
+  
   text-decoration: none;
   list-style: center;
 }
@@ -284,6 +286,9 @@ header{
   padding: 2px;
 }
 }
+
+/* otro media query */
+
 
 
 
