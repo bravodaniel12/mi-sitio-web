@@ -13,6 +13,44 @@ body{
 .main-page{
   grid-area: main-page ;
 }
+
+/* nuevo */
+.item-style a {
+  text-decoration: none;
+  color: rgb(2, 40, 2);
+  padding-left: 100px;
+  text-align: center;
+  justify-content: flex-end;
+}
+.item-style:hover {
+  background: rgb(79, 134, 13);
+
+}
+.menu {
+  text-decoration: none;
+  list-style: none;
+  padding:0px 20px ;
+  border-radius: 100px;
+  font-weight: 200;
+  font-size: 1.1em;
+  top: 50px;
+  left: 50px;
+  display: inline-flex;
+
+}
+.main-nav   {
+  
+   padding: 25px;
+   height: 45px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 1.5em;
+}
+.mainMenu {
+  text-decoration: none;
+  list-style: center;
+}
+/* fin */
+
 header{
   display: grid;
   margin-top: 50px;
@@ -44,6 +82,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .main-content{
@@ -149,7 +188,7 @@ header{
  ///////////////////////////////////////////////////////////////////////////////////////// / */
 
 /* Mobile phones */
-@media only screen and (max-width :750px) {
+@media only screen and (max-width :750px) {  /* 750px */
   body {
       grid-template:
         "main-page"
@@ -214,6 +253,36 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
   }
+  
+.menu {
+  list-style: none;
+  text-align: center;
+  padding:0px 10px ;
+  border-radius: 0;
+  font-weight: 200;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  text-decoration: none;
+
+}
+.main-nav {
+   list-style: center;
+   padding: 15px;
+   height: 2px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 1em;
+   cursor: pointer;  
+   text-decoration: none;
+}
+.li .a {
+  text-decoration: none;
+}
+.item-style a {
+  text-decoration: none;
+  color: rgb(54, 10, 10);
+  padding: 2px;
+}
 }
 
 
