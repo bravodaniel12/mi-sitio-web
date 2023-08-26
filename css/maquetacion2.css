@@ -40,8 +40,7 @@ body{
 }
 .item-style:hover {
   background:grey;
-  padding: 10px ;
-
+  padding: 5px ;
 }
 .menu {
   
@@ -301,47 +300,13 @@ header{
   color: rgb(54, 10, 10);
   padding: 2px;
 }
-}
-
-/* otro media query */
-@media only screen and (max-width:750px) { /* Dice cuando aparece el menu hamburgesa */
-
-  .main-menu {
-      margin-top: 1px;
-      display: none;
-
-  }
-   .menu { /* */ /* */
-      display: block;
-      background-color: rgb(96, 96, 96, .9); /* El color del menu desplegable */
-      margin-top: 40px; /* La distancia entre el menu hamburgesa y el menu */
-      margin-left: -200px;
-      z-index: 3; /* Sirve para definir por encima de quien va, a mayor el nuemro va encima de los menores */
-      position: relative; /* Hace funcionar el z-index */
-     
-      
-  }
-   .item-menu { /* Arreglar, aparece un cosito negro de mas */
-
-      display: inline-block; /* dispaly:block */
-      /* line-height: 70px; */ /* Centra un poco el menu */
-      text-align: center; /* Centra el contenido */
-      border-bottom: 1px solid white; /* Le da un borde al menu en la parte inferior */
-      height: 100%;
-      width: 100%;
-  }
-  .item-menu:hover{ /* Arreglar, aparece un cosito negro de mas */
-      background-color: rgba(71, 68, 68, 0.9);
-      display: inline-block;
-  }
-  .bar-menu {
-      visibility: visible;
-      z-index: 3; /* Sirve para definir por encima de quien va, a mayor el nuemro va encima de los menores */
-      position: relative; /* Hace funcionar el z-index */
-  }
-}
 
 /* ////////////////////////////////////////////////////////////////////////////// */
+
+/* Dice cuando aparece el menu hamburgesa */
+
+
+
 /* /////////////////////////////////////////////////////
 
 

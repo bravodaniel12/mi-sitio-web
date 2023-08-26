@@ -1,19 +1,23 @@
-let barMenu = document.getElementById("bar-menu");
-let mainMenu = document.getElementById("mainMenu");
-let main_nav = document.getElementById("main-nav");
+let barMenu = document.getElementById("barMenu")
+let header = document.getElementById("header")
+let bar = document,getElementById("bar-menu")
 
-barMenu.addEventListener("click", function () {
-  if (main_Menu.classList.contains("main-menu")) {
-    main_Menu.classList.add("main-menu");
-    main_Menu.classList.remove("main-menu");
-    main_Menu.classList.remove("main-nav");
-  }
-  else {
-    main_Menu.classList.remove("main-nav");
-    main_Menu.classList.add("main-menu ");
-    main_Menu.classList.add("main-menu");
-  }
-});
+menu.addEventListener("click",function() {
+
+ /*  if(barMenu.style.height == "60px") {
+      barMenu.style.height = 60 + bar.offsetHeigt +"px"
+  } else {
+    barMenu .style.height = "60px"
+  } */
+})
+
+barMenu = addEventListener("click", function(){
+  alert("tocado")
+}) 
+
+
+
+
 
 /* <div class="main-page">
         <header class="box">

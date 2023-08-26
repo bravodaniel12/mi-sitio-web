@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/* Menu */
+.bar-menu { /* La hamburguesa */
+    cursor: pointer; /* Coloca la manito al estar cerca de la hamburguesa */
+    position: absolute; 
+    
+    color: white; /* Le damos un color a la hamburguesa */
+    font-size: 2.2em; /* Le damos tamaño a la hamburguesa */
+    top: 25px; /* Posicion arriba  */
+    right: 30px; /*posicion de la derecha */
+    visibility: hidden; /* hace que la caja del elemento sea invisible, no se muestra pero sigue ocupando sitio */
+}
+.main-menu { /* el menu principal */
+    height: 120px; /* alto del contenedor */
+    list-style: none; /* Quita el estilo de la lista "ul" */  
+    text-align: center; /* establecer la alineación horizontal de un bloque de texto */
+    background-color: rgb(40, 167, 69); /* le damos color al contenedor main menu */
+    /* height: 120px; / /  */
+    border-radius: 10px;
+}
+.item-menu { /* el texto del menu */
+    display: block;
+    color: rgb(10, 10, 10);
+    text-decoration: none; /* quita el enlace del texto */
+    font-size: 1.5em; /* Tamaño de la letra */   
+    padding: 50px 50px; /* el espacio entre el texto */
+}
+.item-main-menu {
+    height: 100%; /* el 100 por ciento de la negrita */
+    display: inline-block;
+}
+.item-main-menu:hover { /*  */ 
+    cursor: pointer;
+    background-color: rgba(71, 68, 68,.9);  
+}
+
+
+@media only screen and (max-width:1152px) { /* Dice cuando aparece el menu hamburgesa */
+
+    .main-menu {
+        margin-top: 1px;
+        display: none;
+
+    }
+    .main-menu-visible {  /*   / /  */
+        display: block;
+        background-color: rgb(96, 96, 96, .9); /* El color del menu desplegable */
+        margin-top: 40px; /* La distancia entre el menu hamburgesa y el menu */
+        margin-left: -200px;
+        z-index: 3; /* Sirve para definir por encima de quien va, a mayor el nuemro va encima de los menores */
+        position: relative; /* Hace funcionar el z-index */
+       
+        
+    }
+    .item-main-menu{   /* Arreglar, aparece un cosito negro de mas */
+
+        display: inline-block; /* dispaly:block */
+        /* line-height: 70px; / / Centra un poco el menu */
+        text-align: center; /* Centra el contenido */
+        border-bottom: 1px solid white; /* Le da un borde al menu  en la parte inferior */
+        height: 100%;
+        width: 100%;
+    }
+    .item-main-menu:hover{ /* Arreglar, aparece un cosito negro de mas */
+        background-color: rgba(71, 68, 68, 0.9);
+        display: inline-block;
+    }
+    .bar-menu {
+        visibility: visible;
+        z-index: 3; /* Sirve para definir por encima de quien va, a mayor el nuemro va encima de los menores */
+        position: relative; /* Hace funcionar el z-index */
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+.logo {
+    display: flex;
+    border-radius: 10px; /* le da un borde al logo */
+    grid-area: logo; 
+    background-color:; /* le coloca un color al div logo */
+    height: 120px; /* altura del logo */
+    width: 110px; /* ancho del logo */
+    background-image: url(../img/logo.jpg); /* una imagen en el div logo */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-position: center; /* centra la imagen en el contendor div */
+    background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
+    z-index: 1;  /* Sirve para definir por encima de quien va, a mayor el nuemro va encima de los menores */
+    position: relative; /* Hace funcionar el z-index */
+}
+.main-menu1 {
+    grid-area: main-menu1;
+}
+header {
+    margin-top: 20px; /* el espacio entre la parte superior y el header */
+    width: 100%; /* el alto del header que va a ocupar */
+    height: 130px; /* espacio entre el header con la imagen pricncipal */
+    gap: 50px;
+    display: grid;
+    grid-template: "logo     main-menu1  " /
+        100px minmax(100px, 1fr);
+}
+.main-page { /* El div padre */
+    grid-area: main-page;
+}
+
+body {
+    background-color: #718395; /* color de fondo */
+    width: 100%; /* ancho */
+    height: 100vh; /* alto */
+    display: grid;
+    grid-template: "empty-left           main-page                   empty-right" /
+        minmax(50px, 1fr) minmax(200px, 1500px) minmax(50px, 1fr);
+
+}
+span { /* Para la letra de los contenedores */
+    font-size: 1.2em; /* tamaño */
+    line-height: 1.5; /*  establecer la distancia entre líneas de texto */
+    display: flex;
+    text-align: justify; /* para centrar el texto */
+    font-family: 'Times New Roman', Times, serif; /* letra */
+}
+
+.main-content { /* Padre de la imagen principal y contenedores */
+    gap: 50px; /* el espacio entre contenedores */
+    margin-bottom: 50px; /* espacio entre la parte inferior con el contenido */
+    margin-top: 10px; /* espacio entre el header la imagen principal */
+    display: grid;
+    grid-template: "main-img       main-img      main-img "
+        "article-1      article-2      article-3"
+        "text-article-1 text-article-2   text-article-3"
+        "nuew-1          nuew-2             nuew-3"
+        "text-article-1-2 text-article-2-2 text-article-3-2";
+
+
+}
+
+.main-img { /* imagen principal */
+    display: flex;
+    grid-area: main-img;
+    background-color: darkcyan; /* color al div */
+    height: 700px; /* alto */
+    width: 100%;
+    border-radius: 10px;
+    background-image: url(../img/serpiente.png); /* una imagen en el div main-img */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-position: center; /* centra la imagen en el contendor div */
+    background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
+
+}
+@media only screen and (max-width:730px) {
+    .main-img {
+        background-image: url(../img/primera.jpg);
+        background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
+        background-repeat: no-repeat; /* para que no se repita la imagen */
+        background-position: center; /* centra la imagen en el contendor div */
+        border-radius: 10px;
+        width: 100%;
+        height: 700px;
+        display: flex; 
+        position: relative;
+        z-index: 2;     
+    }
+}
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* imagenes y texto */
+.article {
+    border-radius: 10px;
+    height: 250px;
+    grid-area: article-1;
+    background-color: rgba(65, 31, 31, 0.7);
+}
+
+.article-1 {
+
+    border-radius: 10px;
+    grid-area: article-1;
+    background-color: rgb(64, 64, 64, .7);
+    background-image: url(../img/segunda.jpg);
+    background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-position: center; /* centra la imagen en el contendor div */
+    /*     min-width: 200px;
+    min-height: 150px; */
+}
+
+.style-img {
+    display: flex;
+    margin-top: 110px;
+    height: 300px;
+    justify-content: center;
+    font-size: 1.6em;
+    color: white;
+}
+
+.article-2 {
+    border-radius: 10px;
+    grid-area: article-2;
+    background-color: rgb(64, 64, 64, .7);
+}
+
+.article-3 {
+    border-radius: 10px;
+    grid-area: article-3;
+    background-color: rgb(64, 64, 64, .7);
+}
+
+.text-article-1 {
+    margin-top: 10px;
+    grid-area: text-article-1;
+}
+
+.text-article-2 {
+    margin-top: 10px;
+    grid-area: text-article-2;
+}
+
+.text-article-3 {
+    margin-top: 10px;
+    grid-area: text-article-3;
+}
+
+.nuew-1 {
+    margin-top: 10px;
+    grid-area: nuew-1;
+}
+
+.nuew-2 {
+    margin-top: 10px;
+    grid-area: nuew-2;
+}
+
+.nuew-3 {
+    margin-top: 10px;
+    grid-area: nuew-3;
+}
+
+.text-article-1-2 {
+    margin-top: 10px;
+    grid-area: text-article-1-2;
+}
+
+.text-article-2-2 {
+    margin-top: 10px;
+    grid-area: text-article-2-2;
+}
+
+.text-article-3-2 {
+    margin-top: 10px;
+    grid-area: text-article-3-2;
+}
+
+.img-article {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .main-content {
+        display: grid;
+        grid-template: "main-img  "
+            "article-1 "
+            "text-article-1 "
+            "article-2"
+            "text-article-2 "
+            "article-3"
+            "text-article-3"
+            "nuew-1 "
+            "text-article-1-2 "
+            "nuew-2"
+            "text-article-2-2"
+            "nuew-3"
+            "text-article-3-2";
+    }
+
+}
