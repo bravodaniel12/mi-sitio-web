@@ -283,14 +283,25 @@ header{
   text-decoration: none;
 
 }
+html{
+  font-size: 62.5%;
+}
 .main-nav {
    list-style: center;
-   padding: 15px;
-   height: 2px;
+   padding: 10px;
+   width: 2px;
+   height: 1px;
    font-family: Georgia, 'Times New Roman', Times, serif;
-   font-size: 1em;
+   font-size: 1.8em;
    cursor: pointer;  
    text-decoration: none;
+
+   border-radius: 15PX;
+   grid-area:main-menu ;
+   width: 80%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .li .a {
   text-decoration: none;
@@ -308,7 +319,6 @@ header{
 
 
 /* /////////////////////////////////////////////////////
-
 
 
 
