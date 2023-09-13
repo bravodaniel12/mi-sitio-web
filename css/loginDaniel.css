@@ -42,6 +42,7 @@ body {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background-color: #ffffffd2;
 }
 
 .login-container button {
