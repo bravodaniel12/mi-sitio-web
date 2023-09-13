@@ -1,0 +1,70 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffff;
+    background-image: url(../img/Campesinos.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img {
+    text-align: center;
+    justify-content: center;
+
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #ffffffd2;
+    padding: 60px;
+    padding-left: 45px; 
+    border-radius: 12px;
+   /*  box-shadow: -1px 3px 10px 10px #1eb819; */
+    box-shadow: -1px 3px 10px 10px #dfc480;
+   
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container button {
+    width: 107%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+p {
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+a {
+    color: blue;
+    text-decoration: none;
+  }
