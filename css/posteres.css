@@ -1,24 +1,25 @@
-* { 
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(38, 27, 27); */
+}
 header {
     height: 95px;
 }
-
 .page-box-slider {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .box-slider {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    height: calc(100vh - 95px);
+    flex-wrap: wrap; /* mantiene el tamaño del contenido, Een este caso la imagen */
+    height: calc(135vh - 95px);
     position: relative;
     z-index: 10;
+    transition: all 1s;
 }
 
 .box-slider-1 {
@@ -26,62 +27,67 @@ header {
     transition: 1s;
 }
 .box-slider-2 {
-    left: -100%;
+    left: -110%;
     transition: 1s;
 }
 .box-slider-3 {
-    left: -202%;
+    left: -212%;
     transition: 1s;
 }
 .box-slider-4 {
-    left: -303%;
+    left: -319%;
+    transition: 1s;
 }
 
-/* i.con chevron {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    z-index: 30;
-} */
-
-.box-icon-chevron-left, .box-icon-chevron-right {
-    color: white;
+.icon-chevron-left, .icon-chevron-right {
+    color: rgb(255, 255, 255);
     font-size: 2.5em;
     position: relative;
-    top: calc((-105vh) + 400px);
-    z-index: 30;
-    padding: 0 50px;
-    cursor: pointer;
+    top: calc((-120vh) + 210px);
+    z-index: 20;
+   
+}
+.icon-chevron-left {
+    padding-left: 10px;
 }
 
-.box-icon-chevron-right {
-    color: white;
+.icon-chevron-right {
     display: flex;
     justify-content: flex-end;
-    top: calc((-106vh) + 400px);
-
+    top: calc((-125vh) + 220px);
+    left: calc((+100vh) + 640px);
+    padding-left: 120px;
 }
-.box-icon-chevron-left {
-    color: white;
-    display: flex;
-    top: calc((-104vh) + 400px);
-    z-index: 30;
+.icon-chevron-right, .icon-chevron-left {
+    cursor: pointer;
 }
-
-.box-signal {
+.box-box-signal {
     width: 100%;
     display: flex;
-    flex-direction: ;
+    justify-content: center;
+    position: relative;
+    top: -690px;
+    z-index: 150;
+    
+}
+.box-signal {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+
 }
 .signal {
-    width: 120px;
-    height: 20px;
-    background-color: antiquewhite;
-    padding: 0 25px;
+    width: 20px;
+    height:20px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    
+    border-radius: 15px;
 }
+.signal-select {
+    background-color: rgb(242, 13, 13);
 
-
-
-
-
+}
 
