@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARRITO DE COMPRAS</title>
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="icons/all.css">
 </head>
 <body>
-    
+    <div class="main-content">
+        <div class="box-subtotal">
+            <label> subtotal cop </label>
+            <label id="subtotal">0 </label>
+        </div>
+        <div class="box-proceder-pago">
+            <label> Proceder al Pago </label>
+            <label id="numeroProductos">(0 productos) </label>
+        </div>
+        <div class="product-content">
+            <div class="box-img-producto">
+            <img src="img/paa.jpg" alt="">
+            </div>
+            <div class="box-info-producto">
+                <label> Póster es un término que hace referencia a un cartel que se fija en la pared.
+                 Por lo general se entiende que el póster no tiene finalidad publicitaria o que ha perdido esta propiedad.</label>
+            </div>
+        </div>
+        <div class="box-buttons-cantidad">
+            <div id="boxMinus" class="box-minus">
+                <i class="fa-solid fa-minus"></i></div>
+            <div id="boxCantidad" class="box-cant">0</div>
+            <div id="boxPlus" class="box-plus">
+                <i class="fa-solid fa-plus"></i></div>
+        </div>
+    </div>
+
+    <script src="js/carrito.js"></script>
 </body>
 </html>
