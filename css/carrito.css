@@ -52,6 +52,7 @@
 }
 .box-buttons-cantidad{
     font-size: 1.3em;
+    padding: 10px 0px 10px 140px;
     display: flex;
     flex-direction: row;
 }
