@@ -6,12 +6,13 @@
     <title>CARRITO DE COMPRAS</title>
     <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="icons/all.css">
+    
 </head>
 <body>
     <div class="main-content">
         <div class="box-subtotal">
             <label> subtotal cop </label>
-            <label id="subtotal">0 </label>
+            <label id="subTotal">0 </label>
         </div>
         <div class="box-proceder-pago">
             <label> Proceder al Pago </label>
@@ -21,18 +22,23 @@
             <div class="box-img-producto">
             <img src="img/paa.jpg" alt="">
             </div>
+            <div class="box-buttons-cantidad">
+                <div id="boxMinus" class="box-minus">
+                    <i class="fa-solid fa-minus"></i></div>
+                <div id="boxCantidad" class="box-cant">0</div>
+                <div id="boxPlus" class="box-plus">
+                    <i class="fa-solid fa-plus"></i></div>
+            </div>
             <div class="box-info-producto">
-                <label> Póster es un término que hace referencia a un cartel que se fija en la pared.
-                 Por lo general se entiende que el póster no tiene finalidad publicitaria o que ha perdido esta propiedad.</label>
+                <label class="book-title"> Posters </label>
+                <label class="book-description"> La vida moderna del cartel comenzó en el <strong> siglo XIX </strong> , que es cuando surge la palabra cartel, traducida del alemán <strong>“das Plakat”</strong>, tal y como la conocemos. La historia del cartel comenzó en 1866 , cuando el <strong> francés Jules Cherèt, artista gráfico y escenógrafo </strong>, fundó una pequeña litografía en París. Fue este hombre quien formuló los principios básicos del cartel moderno, a saber, la impactación <strong> ( principalmente mediante colores contrastantes y brillantes ) </strong>.</label>
+                <label class="book-autor"><strong> Echo por: </strong> Don cartel </label>    
+                <label class="cover-type"> Papel duro</label>
+                <label class="info-precio"> cop <span class="signo-precio-unidad"> $ </span>
+                <span id="precioUnidad" class="precio-unidad"> 0 </span></label>
             </div>
         </div>
-        <div class="box-buttons-cantidad">
-            <div id="boxMinus" class="box-minus">
-                <i class="fa-solid fa-minus"></i></div>
-            <div id="boxCantidad" class="box-cant">0</div>
-            <div id="boxPlus" class="box-plus">
-                <i class="fa-solid fa-plus"></i></div>
-        </div>
+        
     </div>
 
     <script src="js/carrito.js"></script>
