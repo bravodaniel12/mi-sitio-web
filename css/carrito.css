@@ -46,6 +46,7 @@
 }
 .box-info-producto{
     grid-area: box-info-producto;
+    padding: 20px;
     background-color: aqua;
 
 }
