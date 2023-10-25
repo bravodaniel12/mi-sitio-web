@@ -51,17 +51,17 @@ select {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 65px;
-    background-color: #E6E6E6;
+    background-color: #FEBD69;
 }
 .input_buscador {
     outline: none;
-    width: calc(100% - 110px);
+    width: calc(100% - 0px);
 }
 .icon-busqueda {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #FEBD69;
-    width: 45px;
+    width: 40px;
 }
 .search {
     font-size: 21px;
@@ -112,15 +112,95 @@ select {
     width: 90px;
 }
 .i-carrito {
-    height: 30px;
-    width: 45px;
+    height: 60px;
+    width: 50px;
     margin: 20px 0 0 ;
+    padding: 0 1 1 0px ;
+    padding-left: 15px;
     color: white;
 }
 .l-carrito {
     font-size: 0.8em;
-    padding-bottom: 30px;
-    padding-left: 26px;
+    padding-bottom: 50px;
+    padding-left: 1px;
+    margin: 20px;
     color: white;
 }
+
+
+/* Estilo para el separador vertical */
+.vertical-separator {
+    width: 2px; /* Ancho de la línea vertical */
+    background-color: #000; /* Color de la línea (puedes cambiarlo) */
+    height: 90%; /* Altura del separador, 100% para que abarque toda la altura del contenedor */
+    position: absolute;
+    left: 70%; /* Puedes ajustar la posición izquierda/derecha */
+    top: 10;
+}
+
+/* modal */
+
+.box-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(0, 0, 0,.5);
+    z-index: 10;
+
+}
+.modal{
+    width: 95%;
+    height: 85%;
+    z-index: 20;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    grid-template: "box-main-img-modal  info-modal"     / 
+                            1fr           350px;
+
+}
+
+/* la x */
+.btn-close {
+   position: absolute;
+   top: 5px;
+   right: 10px;
+   font-size: 1.3em;
+   border: 3px solid rgb(44, 176, 224,0.3);
+   border-radius: 6px;
+   padding: 0 3px;
+}
+.box-main-img-modal{
+    grid-area: box-main-img-modal;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-img-modal{
+    width: 40%;
+    height: auto;
+}
+.info-modal{
+    grid-area: info-modal;
+    padding: 20px 40px 20px 40px;
+
+}
+
+.txt-caracteristicas-modal {
+    
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.1em;
+
+}
+
+
 
