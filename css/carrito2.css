@@ -1,0 +1,126 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    background-color:#131921;
+    width: 100%;
+    height: 60px;
+}
+.logo {
+    background-image: url(../img/amazon.png);
+    background-size: cover;
+    width: 113px;
+    height: 50px;
+}
+.ubicacion {
+    font-size: 0.8em;
+    justify-content: center;
+    width: 150px;
+    color: #CCCCCC;
+}
+.icono-ubicacion {
+    font-size: 20px;
+    float: left;
+    margin: 8px;
+    grid-area: icono-ubicacion;
+}
+.enviar {
+    margin-top: 10px;
+    grid-area: enviar;
+}
+.pais {
+    grid-area: pais;
+}/* contenedor donde esta lo de busqueda */
+.content-busqueda {
+    width: calc(100% - 700px);
+    margin: 10px 0 ;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+select, .input_buscador,.icon-busqueda {
+    height: 100%;
+    border: none;
+}
+select {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 65px;
+    background-color: #E6E6E6;
+}
+.input_buscador {
+    outline: none;
+    width: calc(100% - 110px);
+}
+.icon-busqueda {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #FEBD69;
+    width: 45px;
+}
+.search {
+    font-size: 21px;
+}/* so far */
+
+.idioma {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 71.3px;
+}
+.bandera,.lengua {
+    padding-right: 3px;
+    padding-top: 28px;
+    width: 20px;
+    height: 14px;
+}
+.lengua {
+    color: white;
+}/* so far */
+.hola {
+    height: 60px;
+    width: 131px;
+}
+.saludo,.cuenta {
+    color: white;
+    font-size: 0.8em;
+}
+.saludo {
+    padding-top: 16px;
+    color: white;
+}/* so far */
+.reembolso {
+    height: 60px;
+    width: 77px;
+}
+.orden,.retornar{
+    color: white;
+    font-size: 0.8em;
+}
+.retornar {
+    padding-top: 16px;
+    color: white;
+}
+.carrito {
+    display: flex;
+    height: 60px;
+    width: 90px;
+}
+.i-carrito {
+    height: 30px;
+    width: 45px;
+    margin: 20px 0 0 ;
+    color: white;
+}
+.l-carrito {
+    font-size: 0.8em;
+    padding-bottom: 30px;
+    padding-left: 26px;
+    color: white;
+}
+
