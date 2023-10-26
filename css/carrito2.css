@@ -201,6 +201,41 @@ select {
     line-height: 1.1em;
 
 }
-
-
-
+/* cuadritos imagenes chiquitas */
+.contenedor {
+    position: absolute;
+    width: 3400px;
+    height: 1000px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    grid-template-columns: repeat(4, 90px);/* ancho */
+    grid-template-rows: repeat(6, 90px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
+    grid-gap: 10px 20px;
+    }
+    .contenedor .inicio {
+        grid-column-start: 1;
+        background-color: rgb(255, 255, 255) ;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+        border: 2px solid rgb(241, 208, 208)  ;
+      
+    }
+    .box {
+        padding: 3px;
+        background-color: rgb(170, 170, 170);
+    
+    }
+    .dia {
+        background-color: rgb(255, 255, 255) ;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        color: white;
+        cursor: pointer;
+        border: 2px solid rgb(241, 208, 208)  ;
+       
+    }
