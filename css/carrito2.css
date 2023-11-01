@@ -2,7 +2,8 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: poppins;
+    
 }
 header {
     display: flex;
@@ -142,8 +143,8 @@ select {
 
 .box-modal{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -154,17 +155,18 @@ select {
 
 }
 .modal{
-    width: 95%;
-    height: 85%;
+    width: 90%;
+    height: 80%;
     z-index: 20;
     background-color: white;
     border-radius: 20px;
     position: relative;
     display: grid;
-    grid-template: "box-main-img-modal  info-modal"     / 
+    grid-template: "box-main-img-modal  info-modal"   / 
                             1fr           350px;
-
 }
+
+
 
 /* la x */
 .btn-close {
@@ -175,6 +177,7 @@ select {
    border: 3px solid rgb(44, 176, 224,0.3);
    border-radius: 6px;
    padding: 0 3px;
+   cursor: pointer;
 }
 .box-main-img-modal{
     grid-area: box-main-img-modal;
@@ -190,13 +193,13 @@ select {
 }
 .info-modal{
     grid-area: info-modal;
-    padding: 20px 40px 20px 40px;
+    padding: 60px 40px 20px 35px;
 
 }
 
 .txt-caracteristicas-modal {
-    
-    font-size: 1.2em;
+
+    font-size: 1.1em;
     text-align: justify;
     line-height: 1.1em;
 
@@ -204,15 +207,17 @@ select {
 /* cuadritos imagenes chiquitas */
 .contenedor {
     position: absolute;
-    width: 3400px;
-    height: 1000px;
+    top: 200px;
+    right: 1px;
+   /*  width: 3400px;
+    height: 1000px; */
     display: grid;
     align-content: center;
     justify-content: center;
     /* border: 1px solid black; */
-    grid-template-columns: repeat(4, 90px);/* ancho */
-    grid-template-rows: repeat(6, 90px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
-    grid-gap: 10px 20px;
+    grid-template-columns: repeat(4, 60px);/* ancho */
+    grid-template-rows: repeat(6,60px) ;  /* alto */    /* tambien funciona el codigo   repeat(4, 100 px) */ /* 1fr  =   1fraccion */
+    grid-gap: 20px 24px;
     }
     .contenedor .inicio {
         grid-column-start: 1;
@@ -220,14 +225,14 @@ select {
         display: flex;
         justify-content: center;
         align-content: center;
+        color: white;
         cursor: pointer;
-        border: 2px solid rgb(241, 208, 208)  ;
+        border: 2px solid rgb(218, 218, 218);
       
     }
-    .box {
-        padding: 3px;
-        background-color: rgb(170, 170, 170);
-    
+    .box:hover {
+        padding: 1px;
+        border:2px solid #30598d;
     }
     .dia {
         background-color: rgb(255, 255, 255) ;
@@ -236,6 +241,20 @@ select {
         align-content: center;
         color: white;
         cursor: pointer;
-        border: 2px solid rgb(241, 208, 208)  ;
-       
+        border: 2px solid rgb(218, 218, 218);
     }
+    .selected {
+        border-color: rgb(247, 96, 15);
+      }
+      
+
+      /* fuentes */
+      
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
