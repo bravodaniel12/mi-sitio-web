@@ -1,116 +1,77 @@
-*{
-    padding: 0;
+.body {
+    font-family: "poppins", sans-serif;
     margin: 0;
-}
-body{
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size: cover;
-    margin: 30px;
-    font-family: 'Times New Roman', Times, serif;
-     display: block;
-    
-}
-h1 ,h2  {
-    text-align: center;
-    justify-content: center;
-}
-li{
-    margin:4px;
-    padding-left: 3px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-body h1,h2{
-    font-family:'Times New Roman', Times, serif;
-    color: brown;
-    font-weight: 900;/* este sirve para enguesar la letra */
-}
-/* este es otro comando de los botones  */
-.boto1 boton2 boton3 boton4 boton5 boton6{
-    list-style: none; /* Para quitar el boton de inicio en los link */
-    display: inline-block; 
-    padding: 10px 20px; 
-    font-size: 14px; /* Se establece el tamaño de la fuente */
-    cursor: pointer; 
-    text-align: center; 
-    text-decoration: none; 
-    outline: none; 
-    color: rgb(225, 0, 0); /* El puento del boton */
-    background-color: blue; /* Color del fondo del boton */
-    border: none; /* Se le hace un color de borde dependiendo de los siguientes datos, ej {2px solid red) se utilizaria sin las comillas */
-    border-radius: 15px;/* Cambia las esquinas rodondeandolo */
- 
-    box-shadow: 0 9px blue; /* Sombra del boton */
-    margin-right: 20px; /* separar los botones */
-}
-.lista { /* Para centar el boton */
-    font-size: 1.2em;
-    font-weight: 700;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display:inline-block ;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* estos son los comandos de los botones fosforecentes */
-div{
-    margin-top: 20px;
-}
-
-.box-1{
-  --glow-color: rgb(217, 176, 255) ;
-  --glow-spread-color: rgb (191, 123, 255, 0.781);
-  --enhanced-glow-color:  HEX#ECF0F1 ;
-  --btn-color: #FF0000;
-
-}
-
-button {
+    padding: 0;
+    background-color: #0e0d0d; 
+  }
   
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: HEX#ECF0F1 ;
-  --btn-color: #00FF00 ;
-  border: .15em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 25px;
-  font-weight: bold;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em .15em var(--glow-color),
-         0 0 4em 1em var(--glow-spread-color),
-         inset 0 0 .75em .15em var(--glow-color);
-  text-shadow: 0 0 .5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
- }
- button::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: .7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
- }
- button:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em .25em var(--glow-color),
-         0 0 4em 2em var(--glow-spread-color),
-         inset 0 0 .75em .25em var(--glow-color);
- }
- button:active {
-  box-shadow: 0 0 0.6em .25em var(--glow-color),
-         0 0 2.5em 2em var(--glow-spread-color),
-         inset 0 0 .5em .25em var(--glow-color);
- }
+  .hero {
+  /*   background-color: #fff; */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #dd660b;
+  }
+  /* .text-sub {
+    color: rgb(221, 13, 51);
     
+  }
+   */
+  .main-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px ;
+    /* background-color: aliceblue; */ /* color fondo */
+  }
+  
+  .main-div > div {
+   /*  background-color: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #5d4f4f; 
+    box-shadow: 0px 2px 8px rgba(28, 110, 155, 0.875);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .main-div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(221, 14, 14, 0.2);
+  }
+  
+  .main-div a {
+    text-decoration: none;
+    color: #a1a5a9;
+    font-weight: bold;
+    transition: color 0.2s;
+    font-size: 1.2em;
+  }
+  
+  .main-div a:hover {
+    color: #1ea28a;
+  }
+ 
+  /* lluvia */
 
+  
+  .rain {
+    position: absolute;
+    top: -50px;
+    animation: fall 1s linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
