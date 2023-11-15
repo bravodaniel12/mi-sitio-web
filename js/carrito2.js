@@ -1,3 +1,40 @@
+// Selecciona el principal-box-main-img-modal, el icono de cierre y el contenido de box-modal
+var principalBoxMainImgModal = document.querySelector(".principal-box-main-img-modal");
+var btnClose = document.querySelector(".style-btn2.fa-solid.fa-x");
+var boxModal = document.querySelector(".box-modal");
+
+// Obtiene el estado de visibilidad de box-modal del almacenamiento local
+var isVisible = localStorage.getItem("isVisible") === "true";
+
+// Establece la propiedad "display" de box-modal según el estado de visibilidad
+boxModal.style.display = isVisible ? "flex" : "none";
+
+// Agrega un evento "onclick" al principal-box-main-img-modal
+principalBoxMainImgModal.onclick = function() {
+  // Cambia la propiedad "display" de box-modal para mostrarlo u ocultarlo
+  if (boxModal.style.display === "none") {
+    boxModal.style.display = "flex";
+    isVisible = true;
+  } else {
+    boxModal.style.display = "none";
+    isVisible = false;
+  }
+
+  // Almacena el estado de visibilidad en el almacenamiento local
+  localStorage.setItem("isVisible", isVisible);
+}
+
+// Agrega un evento "onclick" al icono de cierre
+btnClose.onclick = function() {
+  // Cambia la propiedad "display" de box-modal para ocultarlo
+  boxModal.style.display = "none";
+  isVisible = false;
+
+  // Almacena el estado de visibilidad en el almacenamiento local
+  localStorage.setItem("isVisible", isVisible);
+}
+
+///////// 
  // Selecciona todos los elementos "box" dentro del contenedor
 var boxes = document.querySelectorAll(".box.dia, .box.inicio");
 
@@ -24,45 +61,6 @@ for (var i = 0; i < boxes.length; i++) {
   }
 } 
 
-/////////
-// Selecciona el carrito, el icono de cierre y el contenido de box-modal
-var carrito = document.querySelector(".carrito");
-var btnClose = document.querySelector(".style-btn2.fa-solid.fa-x");
-var boxModal = document.querySelector(".box-modal");
-
-// Obtiene el estado de visibilidad de box-modal del almacenamiento local
-var isVisible = localStorage.getItem("isVisible") === "true";
-
-// Establece la propiedad "display" de box-modal según el estado de visibilidad
-boxModal.style.display = isVisible ? "flex" : "none";
-
-// Agrega un evento "onclick" al carrito
-carrito.onclick = function() {
-  // Cambia la propiedad "display" de box-modal para mostrarlo u ocultarlo
-  if (boxModal.style.display === "none") {
-    boxModal.style.display = "flex";
-    isVisible = true;
-  } else {
-    boxModal.style.display = "none";
-    isVisible = false;
-  }
-
-  // Almacena el estado de visibilidad en el almacenamiento local
-  localStorage.setItem("isVisible", isVisible);
-}
-
-// Agrega un evento "onclick" al icono de cierre
-btnClose.onclick = function() {
-  // Cambia la propiedad "display" de box-modal para ocultarlo
-  boxModal.style.display = "none";
-  isVisible = false;
-
-  // Almacena el estado de visibilidad en el almacenamiento local
-  localStorage.setItem("isVisible", isVisible);
-}
-
-
-/////////
 //principal cuadritos y todo
 
 //principal
@@ -80,43 +78,49 @@ let boxMainImgModal33 = document.getElementById("boxMainImgModal33");
 let boxMainImgModal44 = document.getElementById("boxMainImgModal44");
 let boxMainImgModal55 = document.getElementById("boxMainImgModal55");
 
-
-  mainImgModal111.addEventListener("click", function() {
-
-    if (mainContent.style.display === "none") {
+// Evento click en la imagen principal
+mainImgModal111.addEventListener("click", function() {
+  // Muestra u oculta el elemento con id "mainContent"
+  if (mainContent.style.display === "none") {
     mainContent.style.display = "block";
-    }
-  
+  }
+});
+
+// Selección de elementos
+const containerImg = document.querySelector('.principal-container-img');
+const imagenPrincipal = document.getElementById('mainImgModal111');
+const miniaturas = document.querySelectorAll('.principal-article');
+
+// Evento mouseover en el contenedor de imágenes
+containerImg.addEventListener('mouseover', (event) => {
+  if (event.target && event.target.classList.contains('principal-article')) {
+    // Cambia la fuente de la imagen principal al pasar el cursor sobre una miniatura
+    const src = event.target.querySelector('.img-mini-principal').getAttribute('src');
+    imagenPrincipal.setAttribute('src', src);
+
+    // Restablece el borde de todas las miniaturas
+    miniaturas.forEach((miniatura) => {
+      miniatura.style.border = '2px double rgb(214, 211, 211)';
+    });
+
+    // Cambia el borde de la miniatura al pasar el cursor
+    event.target.style.border = '3px solid lightblue';
+  }
+});
+
+// Configuración del cursor
+containerImg.style.cursor = 'pointer';
+
+// Eventos mouseover y mouseout para cada miniatura
+miniaturas.forEach((miniatura) => {
+  miniatura.addEventListener('mouseover', () => {
+    // Cambia el borde al pasar el cursor por la miniatura
+    miniatura.style.border = '3px solid lightblue';
   });
 
-  const containerImg = document.querySelector('.principal-container-img');
-  const imagenPrincipal = document.getElementById('mainImgModal111');
-  const miniatura1 = document.querySelectorAll('.principal-article');
-  
-  containerImg.addEventListener('mouseover', (event) => {
-    if (event.target && event.target.classList.contains('principal-article')) {
-      const src = event.target.querySelector('.img-mini-principal').getAttribute('src');
-      imagenPrincipal.setAttribute('src', src);
+  miniatura.addEventListener('mouseout', () => {
+    // Restablece el borde al salir del cursor
+    miniatura.style.border = '2px double rgb(214, 211, 211)';
+  });
+});
 
-  
-      miniaturas.forEach((miniatura) => {
-        miniatura.style.border = '2px double rgb(214, 211, 211)'; // Restablecer el borde de todas las miniaturas
-      });
-  
-      event.target.style.border = '2px solid lightblue'; // Cambiar el borde de la miniatura al pasar el cursor
-    }
-  });
-  
-  containerImg.style.cursor = 'pointer';
-  
-  miniatura1.forEach((miniatura) => {
-    miniatura.addEventListener('mouseover', () => {
-      miniatura.style.border = '2px solid lightblue'; // Cambiar el borde al pasar el cursor por la miniatura
-    });
-  
-    miniatura.addEventListener('mouseout', () => {
-      miniatura.style.border = '2x double rgb(214, 211, 211)'; // Restablecer el borde al salir del cursor
-    });
-  });
-  
-            

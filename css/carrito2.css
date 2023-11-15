@@ -138,6 +138,13 @@ select {
     left: 70%; /* Puedes ajustar la posición izquierda/derecha */
     top: 10;
 }
+/* estilo separador horizontal */
+.Horizontal-separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(216, 205, 205);
+  }
+  
 
 /* modal */
 
@@ -214,15 +221,82 @@ select {
     border-radius: 10px;
     position: absolute;
     display: grid;
-    grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal     pricipal-sub-contenedor  "   /
-                             150px                       1fr                           650px                        300px ;
+    grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal     principal-sub-contenedor  "   /
+                             50px                       1fr                           750px                        300px ;
  }
  .txt-caracteristicas-titulo{
-    font-size: 1.1em;
+    font-size: 1.9em;
     text-align: justify;
     line-height: 1.1em;
     font-weight: 450;
  }
+ .txt-a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #30598d;
+  }
+  
+  .txt-a:hover {
+    text-decoration: underline; /* Muestra la decoración del atributo <a> al pasar el cursor */
+    color: rgb(231, 121, 19) /* Cambia el color a naranja al pasar el cursor */
+  }
+    
+  
+.price {
+    margin-top: 20px;
+    padding: 5px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: rgb(77, 76, 69);
+    font-size: 1em;
+  }
+  .old-pricee {
+    text-decoration: line;
+    color: rgb(77, 76, 69);
+    font-size: 1em;
+  }
+  .normal-price {
+    text-decoration: line;
+    color: rgb(207, 30, 24);
+    font-size: 1.5em;
+  }
+  .new-price {
+    font-weight: bold;
+  }
+  
+  .details {
+    margin-top: 20px;
+  }
+  .details ul {
+    list-style-type: disc; /* Agrega bolitas a los elementos de la lista */
+    margin-left: 20px; /* Añade un margen a la izquierda para dar espacio a las bolitas */
+    
+  }
+  
+  .details li {
+    margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
+  }
+  
+  .shipping p {
+    margin-bottom: 20px; /* Añade espacio entre los párrafos de la sección de envío */
+  }
+  .ship-devolucion {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #30598d;
+  }
+  
+  .ship-devolucion:hover {
+    text-decoration: underline; /* Muestra la decoración del atributo <a> al pasar el cursor */
+    color: rgb(231, 121, 19) /* Cambia el color a naranja al pasar el cursor */
+  }
+  
+/* fin de lo de arrba */
+
 .principal-container-img {
     grid-area: principal-container-img;
     margin-top: 50px;
@@ -242,6 +316,8 @@ select {
     padding: 30px 60px 30px 30px;
     margin-right: 250px;
 }
+
+
 .principal-main-img-modal {
     width: 50%;
     height: 50%;
@@ -265,15 +341,60 @@ border: 2px solid rgb(9, 89, 159);
 
 }
 
-
 .img-mini-principal {
     width: 49%;
     cursor: pointer; 
   }
   
+/* principal sub contenedor */
+.principal-sub-contenedor {
+    position: ;
+    border:2px solid #000;
+    border-radius: 1px solid black;
+    width: 300px;
+    height: 600px;
+}
+.txt-1 {
+    color: #30598d;
+    cursor: pointer;
+    text-align: justify;
+}
+.txt-text {
+    font-family:'Times New Roman', Times, serif;
+}
+.txt-text-n {
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+}
+.txt-text-h {
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(5, 155, 105);
+}
 
+.txt-i {
+    color: #30598d;
+    cursor: pointer;
+    padding-left: 10px;
+}
 
-
+.agregar-carrito {
+    border: #FEBD69;
+    border-radius: 2px;
+    background-color: #30598d;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    text-align: justify;
+}
+.comprar-carrito {
+    border: #FEBD69;
+    border-radius: 2px;
+    background-color: #c2cad4;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    text-align: justify;
+}
 
 /* cuadritos imagenes chiquitas */
 .contenedor {
