@@ -124,3 +124,52 @@ miniaturas.forEach((miniatura) => {
   });
 });
 
+
+let isCursorOverImage = false;
+
+// Evento de entrada para activar el temporizador al pasar el cursor
+document.getElementById('producto').addEventListener('mouseenter', () => {
+  isCursorOverImage = true;
+});
+
+// Evento de salida para limpiar el temporizador al salir del área de la imagen
+document.getElementById('producto').addEventListener('mouseleave', () => {
+  isCursorOverImage = false;
+  desactivarZoom();
+});
+
+
+
+/*  */
+
+
+// Evento de movimiento para el zoom
+document.getElementById('producto').addEventListener('mousemove', (e) => {
+  if (isCursorOverImage) {
+    const containerRect = document.getElementById('producto').getBoundingClientRect();
+    const offsetX = e.clientX - containerRect.left;
+    const offsetY = e.clientY - containerRect.top;
+
+    const mainImg = document.getElementById('mainImgModal111');
+    const magnifier = document.getElementById('magnifier');
+    const cordenadas = document.getElementById('cordenadas');
+
+    const backgroundX = (offsetX / containerRect.width) * 100;
+    const backgroundY = (offsetY / containerRect.height) * 100;
+
+    magnifier.style.backgroundImage = `url('${mainImg.src}')`;
+    magnifier.style.backgroundPosition = `${backgroundX}% ${backgroundY}%`;
+    magnifier.style.display = 'block';
+
+    // Ajustar las coordenadas para que el cursor quede dentro del cuadro
+    cordenadas.style.left = Math.max(0, Math.min(e.clientX - cordenadas.offsetWidth / 2, containerRect.width - cordenadas.offsetWidth)) + 'px';
+    cordenadas.style.top = Math.max(0, Math.min(e.clientY - cordenadas.offsetHeight / 2, containerRect.height - cordenadas.offsetHeight)) + 'px';
+    cordenadas.style.display = 'block';
+  }
+});
+
+function desactivarZoom() {
+  // Oculta el zoom y las coordenadas
+  document.getElementById('magnifier').style.display = 'none';
+  document.getElementById('cordenadas').style.display = 'none';
+}

@@ -1,0 +1,21 @@
+.stars {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.star {
+    color: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.half::before {
+    content: "\f089"; /* Unicode for the half star in Font Awesome */
+    color: gold;
+}
+
+.star.full::before {
+    content: "\f005"; /* Unicode for the full star in Font Awesome */
+    color: gold;
+}

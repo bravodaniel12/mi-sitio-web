@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/carrito2.css">
     <link rel="stylesheet" href="icons/all.css">
     <link rel="shortcut icon" href="img/ama.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
     
 </head>
 <body>
@@ -45,21 +47,24 @@
 
     <div id="main-content" class="main-content">
 
-        <div class="principal-box-main-img-modal">
+        <div class="principal-box-main-img-modal" id="producto">
 
             <img id="mainImgModal111" class="principal-main-img-modal img-box" src="img/funkoPri.jpg" alt="">
-    
+                <div  class="cordenadas" id="cordenadas"></div>
          </div>
+                <div id="magnifier" class="magnifier"></div>
     
          <div class="principal-info-modal">
-            <h2 class="txt-caracteristicas-titulo"> Funko Pop! & Pin: Los Vengadores: Los héroes más poderosos de la Tierra 
-                - 60 aniversario, Iron Man con Pin, exclusivo de Amazon</h2>
+            <h2 class="txt-caracteristicas-titulo"> Funko Pop! & Pin: Los Vengadores: Los héroes más poderosos de la 
+                Tierra - 60 aniversario, Iron Man con Pin, exclusivo de Amazon</h2>
                 <br>
             <a class="txt-a" href="#">Visita la tienda de Funko</a>             
             <div class="Horizontal-separator"></div>
             <div class="price">
                 <span class="normal-price">- 7%    </span>
-                <span class="new-price">  US$19.60 </span>
+                <span class="moneda"> US$</span>
+                <span class="dolares">12</span>
+                <span class="centavos">88</span>
               </div>
             <div class=" ultimo">
                 <span class="old-pricee"> precio recomendado </span><span class="old-price">US$20.990</span>
@@ -105,6 +110,12 @@
             </div>
          </div>
          <div class="principal-sub-contenedor">
+            <div class="precio-container">
+                <span class="moneda">US$</span>
+                <span class="dolares">12</span>
+                <span class="centavos">88</span>
+              
+            </div>
             <span class="txt-1">Devoluciones GRATIS</span>
             <br>
             <br>
@@ -113,13 +124,15 @@
                  <br>
                  <br>
                 <span class="txt-i"> Envios a Colombia <i class="fa-solid fa-location-dot"></i></span>
-
+            <div class="contenedor_botones">
                 <div class="agregar-carrito">
-                    <span>Agregar</span>
+                    <a href="#"><span>Agregar</span></a>
                 </div>
                 <div class="comprar-carrito">
-                    <span>Comprar</span>
+                    <span><a href="#">Comprar</a></span>
                 </div>
+            </div>
+              
          </div>
      
     </div>

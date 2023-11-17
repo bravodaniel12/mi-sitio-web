@@ -1,8 +1,9 @@
 
-*{
+*{  
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     
 }
 header {
@@ -214,21 +215,23 @@ select {
 
 
 .main-content {
-    width: 100%;
-    height: 100%;
+    max-width: 90%;
+    width: 80%;
+    height: 80%;
     z-index: 10; 
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    position: absolute;
+    position: relative;
     display: grid;
+    padding: 10px;
     grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal     principal-sub-contenedor  "   /
-                             50px                       1fr                           750px                        300px ;
+                            120px                        500px                           500px                     50px ;
  }
- .txt-caracteristicas-titulo{
-    font-size: 1.9em;
+ .txt-caracteristicas-titulo {
+    font-size: 1.4em;
     text-align: justify;
-    line-height: 1.1em;
-    font-weight: 450;
+    line-height: 1em; 
+    font-weight: 400;
  }
  .txt-a {
     text-decoration: none;
@@ -246,6 +249,8 @@ select {
 .price {
     margin-top: 20px;
     padding: 5px;
+    display: flex;
+    align-items: flex-end;
   }
   
   .old-price {
@@ -300,21 +305,51 @@ select {
 .principal-container-img {
     grid-area: principal-container-img;
     margin-top: 50px;
-    
    
 }
+
 .principal-box-main-img-modal {
-    grid-area: principal-box-main-img-modal;
-    width: 100%;
-    height: 120%;
-    display: flex;  
+    position: relative;
+    display: flex;
     justify-content: center;
-    padding-top: 0%;
-}
+    /* align-items: center;  */
+    width: 100%;
+    height: 100%;
+  }
+  
+.principal-main-img-modal {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Esto mantendrá la proporción de la imagen sin distorsionarla */
+  }
+  .cordenadas {
+    width: 150px;
+    height: 130px;
+    border: 0.5px solid #333;
+    background-color: #fff9;
+    position: absolute;
+  
+  }
+  
+.magnifier {
+    width: 70.92%; /* Ancho de la lupa */
+    height: 75%; /* Altura de la lupa */
+    border: 2px solid var(--gris);
+    position: absolute;
+    cursor: crosshair;
+  
+    background-image: url('../img/funkoPri.jpg'); /* URL de tu imagen */
+    background-size: 900px; /* Ancho del contenedor de la imagen */
+    top: 40px;
+    left: 50%;
+  }
+  
+/* fin del zoom */  
 .principal-info-modal {
     grid-area: principal-info-modal;
-    padding: 30px 60px 30px 30px;
-    margin-right: 250px;
+    padding: 30px 0px 0px 0px;
+    margin-right: 150px;
+    font-size: 1em;
 }
 
 
@@ -348,12 +383,17 @@ border: 2px solid rgb(9, 89, 159);
   
 /* principal sub contenedor */
 .principal-sub-contenedor {
-    position: ;
-    border:2px solid #000;
-    border-radius: 1px solid black;
-    width: 300px;
-    height: 600px;
-}
+    position: static ;
+    border: 1px solid #cecbcb;
+    border-radius: 1px solid;
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    margin-right: 100px; 
+} 
 .txt-1 {
     color: #30598d;
     cursor: pointer;
@@ -376,25 +416,72 @@ border: 2px solid rgb(9, 89, 159);
     cursor: pointer;
     padding-left: 10px;
 }
+.precio-container {
+    font-family: 'Poppins', sans-serif; /* Asegúrate de tener la fuente Poppins instalada o cargada correctamente */
+    font-size: 24px; /* Ajusta según tus necesidades */
+    display: flex;
+    align-items: flex-end;
+}
+
+.moneda {
+    font-size: 12px; /* Ajusta según tus necesidades */
+    margin-bottom: 10px; /* Ajusta según tus necesidades para alinear con el dígito superior */
+}
+
+.centavos {
+    font-size: 12px; /* Ajusta según tus necesidades */
+    margin-bottom: 10px; /* Ajusta según tus necesidades para alinear con el dígito superior */
+}
+
+.dolares {
+    font-size: 26px; /* Ajusta según tus necesidades */
+    margin-left: 2px; /* Ajusta según tus necesidades para la separación entre el símbolo y el dígito superior */
+    font-weight: 700;
+
+}
+
+.contenedor_botones {
+    display: flex;
+    justify-content:column; /* Puedes ajustar este valor según tus necesidades */
+    align-items: center;
+   
+}
+.comprar-carrito, .agregar-carrito {
+    border: 2px solid #fbfbfb;
+    color: rgb(0, 0, 0);
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; /* Agregado espacio entre los botones */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Agregada transición para suavizar el cambio */
+    
+}
+.comprar-carrito a, .agregar-carrito a {
+    text-decoration: none; /* Quita la decoración del enlace */
+    color: inherit; /* Hereda el color del texto del contenedor padre */
+}
+.comprar-carrito:hover {
+    background-color: #fa8900;
+    
+}
+ .agregar-carrito:hover {
+    background-color: #f7ca00; /* Cambia el color al pasar el cursor */
+} 
 
 .agregar-carrito {
-    border: #FEBD69;
-    border-radius: 2px;
-    background-color: #30598d;
-    width: 70px;
-    height: 30px;
-    text-align: center;
-    text-align: justify;
+    background-color: #ffd814;
+    
 }
 .comprar-carrito {
-    border: #FEBD69;
-    border-radius: 2px;
-    background-color: #c2cad4;
-    width: 70px;
-    height: 30px;
-    text-align: center;
-    text-align: justify;
+    background-color: #ffa41c;
 }
+
+/* fin */
 
 /* cuadritos imagenes chiquitas */
 .contenedor {
@@ -452,5 +539,5 @@ border: 2px solid rgb(9, 89, 159);
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
