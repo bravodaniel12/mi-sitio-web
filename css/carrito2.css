@@ -439,7 +439,6 @@ border: 2px solid rgb(9, 89, 159);
     font-weight: 700;
 
 }
-
 .contenedor_botones {
     display: flex;
     justify-content:column; /* Puedes ajustar este valor según tus necesidades */
