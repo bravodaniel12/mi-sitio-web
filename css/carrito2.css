@@ -361,7 +361,7 @@ select {
 }
 .principal-article {
     border-radius: 10px;
-   border: solid 1px rgb(77, 77, 79);
+    border: solid 1px rgb(77, 77, 79);
     height: 50px;
     width: 50px;
     margin: 15px; 
