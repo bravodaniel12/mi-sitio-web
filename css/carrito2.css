@@ -6,6 +6,12 @@
     font-family: 'Poppins', sans-serif;
     
 }
+/* body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+} */
 header {
     display: flex;
     flex-direction: row;
@@ -216,7 +222,7 @@ select {
 
 .main-content {
     max-width: 90%;
-    width: 80%;
+    width: 90%;
     height: 80%;
     z-index: 10; 
     background-color: rgb(255, 255, 255);
@@ -225,7 +231,9 @@ select {
     display: grid;
     padding: 10px;
     grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal     principal-sub-contenedor  "   /
-                            120px                        500px                           500px                     50px ;
+                            120px                        1fr                          500px                     210px ;
+    grid-gap: 40px;
+    margin: 0 auto;
  }
  .txt-caracteristicas-titulo {
     font-size: 1.4em;
@@ -302,6 +310,7 @@ select {
   
 /* fin de lo de arrba */
 
+
 .principal-container-img {
     grid-area: principal-container-img;
     margin-top: 50px;
@@ -309,56 +318,50 @@ select {
 }
 
 .principal-box-main-img-modal {
+    grid-area: principal-box-main-img-modal;
     position: relative;
     display: flex;
     justify-content: center;
     /* align-items: center;  */
-    width: 100%;
-    height: 100%;
+    height: 85%;
+    padding: 0;
   }
   
 .principal-main-img-modal {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    object-fit: contain; /* Esto mantendrá la proporción de la imagen sin distorsionarla */
+    padding: 10px;
   }
   .cordenadas {
     width: 150px;
     height: 130px;
-    border: 0.5px solid #333;
-    background-color: #fff9;
     position: absolute;
   
   }
   
 .magnifier {
-    width: 70.92%; /* Ancho de la lupa */
+    width: 39%; /* Ancho de la lupa */
     height: 75%; /* Altura de la lupa */
     border: 2px solid var(--gris);
     position: absolute;
-    cursor: crosshair;
-  
+    display: none;
     background-image: url('../img/funkoPri.jpg'); /* URL de tu imagen */
     background-size: 900px; /* Ancho del contenedor de la imagen */
-    top: 40px;
-    left: 50%;
+    top: 41px;
+    left: 56%;
   }
   
 /* fin del zoom */  
 .principal-info-modal {
     grid-area: principal-info-modal;
     padding: 30px 0px 0px 0px;
-    margin-right: 150px;
+    margin-right: 10px;
+    margin-left: 30px;
     font-size: 1em;
+    
 }
 
 
-.principal-main-img-modal {
-    width: 50%;
-    height: 50%;
-    margin-top: 60px;
-   
-}
 .principal-article {
     border-radius: 10px;
     border: solid 1px rgb(77, 77, 79);
@@ -386,13 +389,13 @@ border: 2px solid rgb(9, 89, 159);
     position: static ;
     border: 1px solid #cecbcb;
     border-radius: 1px solid;
-    width: 200px;
     height: 400px;
     display: inline-block;
     align-items: center;
     justify-content: center;
     padding: 10px 10px 10px 10px;
-    margin-right: 100px; 
+    margin-left: 10px; 
+   
 } 
 .txt-1 {
     color: #30598d;
@@ -540,3 +543,33 @@ border: 2px solid rgb(9, 89, 159);
   font-weight: 400;
   src: url('poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+
+/* estrellas */
+.caja-estrella{
+    position: absolute;
+    background-color: #30598d;
+    width: 700px;
+    width: 300px;
+}
+
+.estrella{
+    color: rgb(255, 164, 28);
+    font-size: 1.2em;
+    
+  }
+  .box-estrellas{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #75e4fc; */
+  }
+  .estrella2{
+    color: rgb(255, 164, 28);
+    font-size: 1.2em;
+    
+  }
+  .box-estrellas2{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #75e4fc; */
+  }

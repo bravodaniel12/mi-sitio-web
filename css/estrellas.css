@@ -1,0 +1,29 @@
+
+/* estrellas */
+
+
+.estrella{
+    color: rgb(255, 164, 28);
+    font-size: 1.2em;
+    
+  }
+  .box-estrellas{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #75e4fc; */
+  }
+  
+    
+  .box-estrellas2{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #75e4fc; */
+  }
+  .cama-estrella{
+    position: fixed;
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+
+
+  }
