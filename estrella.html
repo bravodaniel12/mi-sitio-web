@@ -8,45 +8,66 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="box-estrellas">
-        <span class="califica" id="puntuacion" > 0.3 </span>
-        <div class="estrella">
-            <i id="start1"></i>
-        </div>
-        <div class="estrella">
-            <i id="start2"></i>
-        </div>
-        <div class="estrella">
-            <i id="start3"></i>
-        </div>
-        <div class="estrella">
-            <i id="start4"></i>
-        </div>
-        <div class="estrella">
-            <i id="start5"></i>
-        </div>
-    </div>
 
-    <div class="cama-estrella">
-        <div class="box-estrellas2">
-            <span class="califica" id="puntuacion2" > 0.4 </span>
-            <div class="estrella">
-                <i id="start1"></i>
-            </div>
-            <div class="estrella">
-                <i id="start2"></i>
-            </div>
-            <div class="estrella">
-                <i id="start3"></i>
-            </div>
-            <div class="estrella">
-                <i id="start4"></i>
-            </div>
-            <div class="estrella">
-                <i id="start5"></i>
-            </div>
+    <div class="puntuaciones">
+        <div class="puntuacion-item">
+            <label for="puntuacion1">Puntuación 1:</label>
+            <input type="text" id="puntuacion1" name="puntuacion1">
+        </div>
+
+        <div class="puntuacion-item">
+            <label for="puntuacion2">Puntuación 2:</label>
+            <input type="text" id="puntuacion2" name="puntuacion2">
+        </div>
+
+        <div class="puntuacion-item">
+            <label for="puntuacion3">Puntuación 3:</label>
+            <input type="text" id="puntuacion3" name="puntuacion3">
+        </div>
+
+        <div class="puntuacion-item">
+            <label for="puntuacion4">Puntuación 4:</label>
+            <input type="text" id="puntuacion4" name="puntuacion4">
+        </div>
+
+        <div class="puntuacion-item">
+            <label for="puntuacion5">Puntuación 5:</label>
+            <input type="text" id="puntuacion5" name="puntuacion5">
+        </div>
+
+        <button id="graficarBtn">Graficar</button>
+<br>
+        <label for="puntuacion1">Puntuación 1:</label>
+        <div class="barra-container">
+            <div class="barra" id="barra1"></div>
+            <div class="porcentaje" id="porcentaje1"></div>
+        </div>
+
+        <label for="puntuacion2">Puntuación 2:</label>
+        <div class="barra-container">
+            <div class="barra" id="barra2"></div>
+            <div class="porcentaje" id="porcentaje2"></div>
+        </div>
+
+        <label for="puntuacion3">Puntuación 3:</label>
+        <div class="barra-container">
+            <div class="barra" id="barra3"></div>
+            <div class="porcentaje" id="porcentaje3"></div>
+        </div>
+
+        <label for="puntuacion4">Puntuación 4:</label>
+        <div class="barra-container">
+            <div class="barra" id="barra4"></div>
+            <div class="porcentaje" id="porcentaje4"></div>
+        </div>
+
+        <label for="puntuacion5">Puntuación 5:</label>
+        <div class="barra-container">
+            <div class="barra" id="barra5"></div>
+            <div class="porcentaje" id="porcentaje5"></div>
         </div>
     </div>
+   
     <script src="js/estrellas.js"></script>
 </body>
 </html>

@@ -574,3 +574,30 @@ border: 2px solid rgb(9, 89, 159);
     flex-direction: row;
     /* background-color: #75e4fc; */
   }
+
+  /* meadia */
+  /* Si el tamaño de la pantalla es de 600px o menos, 
+  establecer el tamaño de la fuente del encabezado a 30px */
+@media screen and (max-width: 600px) {
+    header {
+        width: 200%;
+        height: 100%;
+      font-size: 10px;
+    }
+    main-content {
+        max-width: 90%;
+        width: 90%;
+        height: 80%;
+        z-index: 10; 
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        position: relative;
+        display: grid;
+        padding: 10px;
+        grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal     principal-sub-contenedor  "   /
+                                120px                        1fr                          500px                     210px ;
+        grid-gap: 40px;
+        margin: 0 auto;
+     }
+   }
+   
